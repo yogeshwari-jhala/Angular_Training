@@ -1,0 +1,9 @@
+.danger
+{
+    border: 2px solid rgba(132, 9, 9, 0.913);
+    background-color:rgb(240, 109, 109);
+    padding: 20px 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    margin-top: 25px;
+}

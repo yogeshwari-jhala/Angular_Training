@@ -1,0 +1,5 @@
+<button type="button" (click)="show()">Display Details</button>
+<p *ngIf="isPara" >{{name}}</p>
+<p *ngFor='let i of arrayCounter' [ngStyle]="{backgroundColor:getColor(i)}" [ngClass]="{'text':i>=5}">    
+  {{i}} 
+</p>
