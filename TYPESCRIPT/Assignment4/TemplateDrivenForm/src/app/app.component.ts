@@ -10,7 +10,7 @@ import { UserForm } from './user-forms';
 export class AppComponent {
   arr:UserForm[]=[];
   
-  subscriptions = ['Basic', 'Advanced', 'Pro'];
+  //subscriptions = ['Basic', 'Advanced', 'Pro'];
   email:string ="";
   subscription : string ="";
   password : string="";
