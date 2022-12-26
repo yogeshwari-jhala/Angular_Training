@@ -1,0 +1,22 @@
+.sub{
+    padding-left: 20px;
+}
+.success{
+    background-color: rgb(84, 162, 84);
+    color: white;
+    font-weight: 200;
+}
+.success:hover{
+    background-color: rgb(170, 232, 170);
+    color: rgb(18, 54, 18);
+    font-weight: 200;
+}
+.reset{
+    background-color: rgb(216, 42, 42);
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+.reset:hover{
+    background-color: rgb(245, 183, 183);
+    color: rgb(216, 42, 42);
+}

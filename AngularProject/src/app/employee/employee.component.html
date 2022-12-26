@@ -1,0 +1,80 @@
+
+<div class="card" style="width: 50rem; background-color: white; padding: 10px 20px 10px 20px;">
+    <h1 style="color: rgba(21, 5, 62, 0.836); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding: 4px 20px 15px 12px; ">Employee Form</h1>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="form-group col-md-5">
+
+            <input type="text" placeholder="Enter Name" formControlName="name" [pattern]="namepattern">
+
+            <div style="color: red;"
+
+                *ngIf="employeeForm.controls['name'].touched && employeeForm.controls['name'].invalid">
+
+                <span *ngIf="employeeForm.controls['name'].hasError('required')">name is required</span>
+
+                <span *ngIf="employeeForm.controls['name'].hasError('pattern')">only alphabets with space between 2 to
+
+                    20 characters
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="form-group col-md-4">
+
+                <input type="text" placeholder="Enter Mobile No." formControlName="mob" required>
+
+                <div style="color: red;"
+
+                    *ngIf="employeeForm.controls['mob'].touched && employeeForm.controls['mob'].invalid">
+
+                    <span *ngIf="employeeForm.controls['mob'].hasError('required')">Mobile no is required</span>
+
+                    <span *ngIf="employeeForm.controls['mob'].getError?.length">Use 10 digit Mobile No.</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="form-group col-md-4">
+                <input type="text" placeholder="Enter Address" formControlName="addr" required>
+                <div style="color: red;"
+                    *ngIf="employeeForm.controls['addr'].touched && employeeForm.controls['addr'].invalid">
+                    <span *ngIf="employeeForm.controls['addr'].hasError('required')">address is required</span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-12 sub">
+                    <button class="btn btn-lg btn-block success">Submit</button>
+                </div>
+            </div>
+            <div class="row">
+
+
+
+                <div class="form-group col-md-12 sub">
+
+                    <button class="btn btn-lg btn-block reset" (click)="reset()">Reset</button>
+
+                </div>
+
+            </div>
+
+    </form>
+
+
+
+</div>

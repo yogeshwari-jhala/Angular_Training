@@ -1,0 +1,51 @@
+{
+  "getAllData": [
+    {
+      "id": 1,
+      "name": "Yogeshwari",
+      "addr": "Palkhanda",
+      "mob": "1234567891"
+    },
+    {
+      "id": 4,
+      "name": "Nammu",
+      "addr": "Dehradun",
+      "mob": "1722828282"
+    },
+    {
+      "id": 5,
+      "name": "Harsha ",
+      "addr": "Bhopal",
+      "mob": "1717287272"
+    },
+    {
+      "id": 6,
+      "name": "Junaid",
+      "addr": "Ujjain",
+      "mob": "1628282822"
+    },
+    {
+      "id": 7,
+      "name": "Suruchi",
+      "addr": "Ujjain",
+      "mob": "9090909090"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
