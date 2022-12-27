@@ -9,6 +9,16 @@
       "phone": "12345677777",
       "skills": "Angular Intermediate",
       "id": 1
+    },
+    {
+      "name": "harsha",
+      "email": "har@yash.com",
+      "password": "1234567891",
+      "dob": "2022-12-27T18:30:00.000Z",
+      "gender": "female",
+      "phone": "12345677777",
+      "skills": "Angular Intermediate",
+      "id": 2
     }
   ],
   "posts": [
