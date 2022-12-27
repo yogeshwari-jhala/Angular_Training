@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "name": "yogeshwari",
+      "email": "yogeshwari@gmailcom",
+      "password": "1234445555",
+      "dob": "2022-12-12T18:30:00.000Z",
+      "gender": "female",
+      "phone": "12345677777",
+      "skills": "Angular Intermediate",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
