@@ -16,11 +16,11 @@ export class AppComponent {
   ngOnInit(): void {
     this.FormSubmit=this.fb.group({
       name:['',[Validators.required,Validators.minLength(6),Validators.maxLength(32)]],
-      email:['',[Validators.required]],
-      password:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
+      email:['',[Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+      password:['',[Validators.required,Validators.minLength(6)]],
       dob:['',Validators.required],
       gender:['',Validators.required],
-      phone:['', Validators.required],
+      phone:['', Validators.required,Validators.minLength(10)],
       skills:['', Validators.required],
       })
     }

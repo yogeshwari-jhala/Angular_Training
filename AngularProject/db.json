@@ -29,6 +29,24 @@
       "name": "Suruchi",
       "addr": "Ujjain",
       "mob": "9090909090"
+    },
+    {
+      "id": 8,
+      "name": "Utsavi",
+      "addr": "Ujjain",
+      "mob": "2829292929"
+    },
+    {
+      "id": 9,
+      "name": "Nikita",
+      "addr": "Vidisha",
+      "mob": "2345678853"
+    },
+    {
+      "id": 10,
+      "name": "Shiti",
+      "addr": "indore",
+      "mob": "1948372722"
     }
   ],
   "posts": [
