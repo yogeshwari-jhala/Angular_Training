@@ -1,0 +1,41 @@
+<br>
+<br>
+
+<form [formGroup]="FormSubmit" (ngSubmit)="onSubmit()">
+
+<mat-card class="card">
+<h1 style="text-align: center; font-size: 25px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">Login Form</h1>
+
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>User Name</mat-label>
+    <input formControlName="name" matInput placeholder="Placeholder">
+    <mat-icon matSuffix>face</mat-icon>   
+  </mat-form-field>
+  <div style="color: red;"
+                    *ngIf="FormSubmit.controls['name'].touched && FormSubmit.controls['name'].invalid">
+                    <span *ngIf="FormSubmit.controls['name'].hasError('required')">Min 6 & Max 32 characters allowed</span>
+  </div>
+</div>
+
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input formControlName="password" [type]="hide ? 'password' : 'text'" matInput placeholder="Placeholder">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <div style="color: red;"
+  *ngIf="FormSubmit.controls['password'].touched && FormSubmit.controls['password'].invalid">
+  <span *ngIf="FormSubmit.controls['password'].hasError('required')">Length should be between 6-12</span>
+</div>
+</div>
+
+
+
+<div>
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+</div>
+</mat-card>
+</form>

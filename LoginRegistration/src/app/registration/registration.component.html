@@ -1,0 +1,95 @@
+<br>
+<br>
+<form [formGroup]="FormSubmit" (ngSubmit)="onSubmit()">
+<mat-card class="card">
+<h1 style="text-align: center; font-size: 25px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">Registeration Form</h1>
+
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Full Name</mat-label>
+    <input formControlName="name" matInput placeholder="Placeholder">
+    <mat-icon matSuffix>face</mat-icon>   
+  </mat-form-field>
+  <div style="color: red;"
+                    *ngIf="FormSubmit.controls['name'].touched && FormSubmit.controls['name'].invalid">
+                    <span *ngIf="FormSubmit.controls['name'].hasError('required')">Min 6 & Max 32 characters allowed</span>
+  </div>
+</div>
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Email Id</mat-label>
+    <input formControlName="email" matInput placeholder="Placeholder">
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+  <div style="color: red;"
+                    *ngIf="FormSubmit.controls['email'].touched && FormSubmit.controls['email'].invalid">
+                    <span *ngIf="FormSubmit.controls['email'].hasError('required')">Not a valid email</span>
+  </div>
+</div>
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input formControlName="password" [type]="hide ? 'password' : 'text'" matInput placeholder="Placeholder">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <div style="color: red;"
+  *ngIf="FormSubmit.controls['password'].touched && FormSubmit.controls['password'].invalid">
+  <span *ngIf="FormSubmit.controls['password'].hasError('required')">Length should be between 6-12</span>
+</div>
+</div>
+<div>
+  <h3>Gender :</h3>
+  <mat-radio-group formControlName="gender" aria-label="Select an option">
+    <mat-radio-button  value="male">Male<mat-icon matSuffix>male</mat-icon></mat-radio-button>
+    <mat-radio-button value="female">Female<mat-icon matSuffix>female</mat-icon></mat-radio-button>
+    <mat-radio-button value="other">Other<mat-icon matSuffix><mat-icon matSuffix>transgender</mat-icon></mat-icon></mat-radio-button>
+  </mat-radio-group>
+  <div style="color: red;"
+  *ngIf="FormSubmit.controls['gender'].touched && FormSubmit.controls['gender'].invalid">
+  <span *ngIf="FormSubmit.controls['gender'].hasError('required')">Select Gender</span>
+</div>
+</div>
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Date of Birth</mat-label>
+    <input formControlName="dob" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <div style="color: red;"
+  *ngIf="FormSubmit.controls['dob'].touched && FormSubmit.controls['dob'].invalid">
+  <span *ngIf="FormSubmit.controls['dob'].hasError('required')">Select Date</span>
+</div>
+</div>
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Phone Number</mat-label>
+    <input formControlName="phone" matInput placeholder="Placeholder">
+    <mat-icon matSuffix>phone</mat-icon>
+  </mat-form-field>
+  <div style="color: red;"
+  *ngIf="FormSubmit.controls['phone'].touched && FormSubmit.controls['phone'].invalid">
+  <span *ngIf="FormSubmit.controls['phone'].hasError('required')">Enter correct phone no.</span>
+</div>
+</div>
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Select an option</mat-label>
+    <mat-select formControlName="skills" [(value)]="selected">
+      <mat-option value="Angular Basic">Angular Basic</mat-option>
+      <mat-option value="Angular Intermediate">Angular Intermediate</mat-option>
+      <mat-option value="Angular Advance">Angular Advance</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div style="color: red;"
+  *ngIf="FormSubmit.controls['skills'].touched && FormSubmit.controls['skills'].invalid">
+  <span *ngIf="FormSubmit.controls['skills'].hasError('required')">Select skill</span>
+</div>
+</div>
+<div>
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+</div>
+</mat-card>
+</form>

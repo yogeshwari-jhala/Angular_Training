@@ -1,0 +1,50 @@
+<mat-sidenav-container >
+  <mat-sidenav #sidenav>
+      <mat-nav-list (click)="sidenav.close()">
+        <a mat-list-item>
+          <mat-icon>library_books</mat-icon>
+          <span>Courses List</span>
+      </a>
+      <a mat-list-item>
+          <mat-icon>library_add</mat-icon>
+          <span>Add Course</span>
+      </a>
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.open()">
+          <mat-icon>menu</mat-icon>
+      </button>
+      
+      <a mat-button>
+
+          <mat-icon>home</mat-icon>
+
+          Home
+
+      </a>
+
+
+ 
+      <a routerLink="login" mat-button>
+        <mat-icon>account_circle</mat-icon>
+        Login
+
+    </a>
+      <a routerLink="register" mat-button>
+          <mat-icon>person_add</mat-icon>
+          Register
+      </a>
+
+      <a mat-button [matMenuTriggerFor]="dropdown">
+        About Us
+    </a>
+    <mat-menu #dropdown>
+        <button mat-menu-item routerLink="/">CEO Message</button>
+        <button mat-menu-item routerLink="/">Contact Details</button>
+    </mat-menu>
+ 
+
+  </mat-toolbar>
+</mat-sidenav-container>
+<router-outlet></router-outlet>
