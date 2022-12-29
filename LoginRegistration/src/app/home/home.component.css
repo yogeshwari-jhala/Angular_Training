@@ -1,0 +1,10 @@
+mat-divider{
+    color: black;
+}
+mat-card {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 200px 300px 500px;
+}

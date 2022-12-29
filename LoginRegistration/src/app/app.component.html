@@ -1,4 +1,4 @@
-<mat-sidenav-container >
+<mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav>
       <mat-nav-list (click)="sidenav.close()">
         <a mat-list-item>
@@ -16,7 +16,7 @@
           <mat-icon>menu</mat-icon>
       </button>
       
-      <a mat-button>
+      <a routerLink="home" mat-button>
 
           <mat-icon>home</mat-icon>
 
@@ -40,11 +40,12 @@
         About Us
     </a>
     <mat-menu #dropdown>
-        <button mat-menu-item routerLink="/">CEO Message</button>
-        <button mat-menu-item routerLink="/">Contact Details</button>
+        <button mat-menu-item (click)="openDialog1()">CEO Message</button>
+        <button mat-menu-item (click)="openDialog2()">Contact Details</button>
     </mat-menu>
  
+    
 
   </mat-toolbar>
+  <router-outlet></router-outlet>
 </mat-sidenav-container>
-<router-outlet></router-outlet>

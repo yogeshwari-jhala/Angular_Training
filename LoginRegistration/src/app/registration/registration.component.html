@@ -82,12 +82,32 @@
       <mat-option value="Angular Intermediate">Angular Intermediate</mat-option>
       <mat-option value="Angular Advance">Angular Advance</mat-option>
     </mat-select>
+    <mat-icon matSuffix>view_headline</mat-icon>
   </mat-form-field>
   <div style="color: red;"
   *ngIf="FormSubmit.controls['skills'].touched && FormSubmit.controls['skills'].invalid">
   <span *ngIf="FormSubmit.controls['skills'].hasError('required')">Select skill</span>
 </div>
 </div>
+<div>
+  <h3>Hobbies</h3>
+  <mat-divider></mat-divider>
+
+<mat-chip-listbox aria-label="sports selection">
+
+  <mat-chip-option selected>Reading Books</mat-chip-option>
+
+  <mat-chip-option>Football</mat-chip-option>
+
+  <mat-chip-option>hockey</mat-chip-option>
+
+  <mat-chip-option>snooker</mat-chip-option>
+
+</mat-chip-listbox>
+
+</div>
+<mat-divider></mat-divider>
+<br>
 <div>
   <button type="submit" mat-raised-button color="primary">Submit</button>
 </div>

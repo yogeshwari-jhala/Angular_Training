@@ -1,0 +1,20 @@
+.heading {
+    text-align: center;
+    color: #454343;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    z-index: 999;
+}
+.white-heading{
+    color: #072644;
+}
+img{
+    border-radius: 50%;
+    margin-left: 130px;
+    height: 200px;
+    width: 200px;
+}
