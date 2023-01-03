@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CEOmessage } from './dialog/CEOmessage/ceomessage';
 import { MatDialog } from '@angular/material/dialog';
 import { ContactDetails } from './dialog/Contact/contactdetails';
+import { FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { ContactDetails } from './dialog/Contact/contactdetails';
 export class AppComponent {
   title = 'LoginRegistration';
   sports:string[]=['cricket','football','hockey','snooker'];
-
+  // FormSubmit!:FormGroup;
   constructor(public dialog: MatDialog) {}
 
 
@@ -39,4 +40,16 @@ export class AppComponent {
     });
 
   }
+
+  // openStepper() {
+
+  //   this.dialog.open(StepperformComponent,{
+
+  //     width: '600px',
+
+  //     height:'450px'
+
+  //   });
+
+  // }
 }

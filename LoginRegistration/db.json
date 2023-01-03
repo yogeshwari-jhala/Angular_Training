@@ -1,0 +1,57 @@
+{
+  "registered": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "Yogeshwari",
+      "email": "y@gmail.com",
+      "password": "1234567",
+      "dob": "2023-01-04T18:30:00.000Z",
+      "gender": "female",
+      "phone": "1234567891",
+      "skills": "Angular Advance",
+      "id": 2
+    },
+    {
+      "name": "harsha",
+      "email": "hk@gmail.com",
+      "password": "12422562",
+      "dob": "2022-12-20T18:30:00.000Z",
+      "gender": "female",
+      "phone": "1234567891",
+      "skills": "Angular Advance",
+      "id": 3
+    }
+  ],
+  "stepper": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "fullname": "yogi",
+      "emailid": "yo@gmail.com",
+      "fathername": "Balram Singh Jhala",
+      "mothername": "Sanjana Jhala",
+      "gender": "female",
+      "dob": "2023-01-10T18:30:00.000Z",
+      "mob": "1234567845",
+      "bfullname": "Yogi",
+      "bankaccount": "123456789132",
+      "bankname": "SBI",
+      "ifsc": "SBI1241",
+      "internetbanking": "Yes",
+      "mobilebanking": "Yes",
+      "presentaddress": "Palkhanda",
+      "permanentaddress": "Palkhanda",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

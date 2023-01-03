@@ -1,0 +1,12 @@
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 470px;
+    margin-left: 430px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 5px rgb(31, 26, 26);
+}
+mat-form-field, .gender{
+    margin-left: 60px;
+}

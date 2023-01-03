@@ -1,0 +1,205 @@
+<br>
+<mat-card class="card">
+<mat-stepper labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Basic Information</ng-template>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Full Name</mat-label>
+                    <input formControlName="fullname" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>face</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['fullname'].touched && firstFormGroup.controls['fullname'].invalid">
+                    <span *ngIf="firstFormGroup.controls['fullname'].hasError('required')">Min 6 & Max 32 characters
+                        allowed</span>
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp; <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email Id</mat-label>
+                    <input formControlName="emailid" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['emailid'].touched && firstFormGroup.controls['emailid'].invalid">
+                    <span *ngIf="firstFormGroup.controls['emailid'].hasError('required')">Not a valid email</span>
+                </div>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Father's Name</mat-label>
+                    <input formControlName="fathername" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['fathername'].touched && firstFormGroup.controls['fathername'].invalid">
+                    <span *ngIf="firstFormGroup.controls['fathername'].hasError('required')">Min 6 & Max 32 characters
+                        allowed</span>
+                </div>
+                &nbsp; &nbsp; &nbsp; <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Mother's Name</mat-label>
+                    <input formControlName="mothername" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['mothername'].touched && firstFormGroup.controls['mothername'].invalid">
+                    <span *ngIf="firstFormGroup.controls['mothername'].hasError('required')">Min 6 & Max 32 characters
+                        allowed</span>
+                </div>
+            </div>
+            <div class="gender">
+                <h3>Gender :</h3>
+                <mat-radio-group formControlName="gender" aria-label="Select an option">
+                    <mat-radio-button value="male">Male<mat-icon matSuffix>male</mat-icon></mat-radio-button>
+                    <mat-radio-button value="female">Female<mat-icon matSuffix>female</mat-icon></mat-radio-button>
+                    <mat-radio-button value="other">Other<mat-icon matSuffix><mat-icon
+                                matSuffix>transgender</mat-icon></mat-icon></mat-radio-button>
+                </mat-radio-group>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['gender'].touched && firstFormGroup.controls['gender'].invalid">
+                    <span *ngIf="firstFormGroup.controls['gender'].hasError('required')">Select Gender</span>
+                </div>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>Date of Birth</mat-label>
+                  <input formControlName="dob" matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <div style="color: red;"
+                *ngIf="firstFormGroup.controls['dob'].touched && firstFormGroup.controls['dob'].invalid">
+                <span *ngIf="firstFormGroup.controls['dob'].hasError('required')">Select Date</span>
+              </div>
+              &nbsp; &nbsp; &nbsp; &nbsp;
+                <mat-form-field appearance="outline">
+                  <mat-label>Phone Number</mat-label>
+                  <input formControlName="mob" matInput placeholder="Placeholder">
+                  <mat-icon matSuffix>phone</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                *ngIf="firstFormGroup.controls['mob'].touched && firstFormGroup.controls['mob'].invalid">
+                <span *ngIf="firstFormGroup.controls['mob'].hasError('required')">Enter correct phone no.</span>
+              </div>
+              </div>
+                <div class="gender">
+                    <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="firstFormGroup" optional>
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Bank details</ng-template>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Full Name</mat-label>
+                    <input formControlName="bfullname" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['bfullname'].touched && firstFormGroup.controls['bfullname'].invalid">
+                    <span *ngIf="firstFormGroup.controls['bfullname'].hasError('required')">Min 6 & Max 32 characters
+                        allowed</span>
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp; <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Bank Account</mat-label>
+                    <input formControlName="bankaccount" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>account_balance</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['bankaccount'].touched && firstFormGroup.controls['bankaccount'].invalid">
+                    <span *ngIf="firstFormGroup.controls['bankaccount'].hasError('required')">Not a valid email</span>
+                </div>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Bank Name</mat-label>
+                    <input formControlName="bankname" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>account_balance</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['bankname'].touched && firstFormGroup.controls['bankname'].invalid">
+                    <span *ngIf="firstFormGroup.controls['bankname'].hasError('required')">Min 6 & Max 32 characters
+                        allowed</span>
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp; <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>IFSC Code</mat-label>
+                    <input formControlName="ifsc" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>event_note</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['ifsc'].touched && firstFormGroup.controls['ifsc'].invalid">
+                    <span *ngIf="firstFormGroup.controls['ifsc'].hasError('required')">Not a valid email</span>
+                </div>
+            </div>
+            <div class="gender">
+                <h3>Internet Banking :</h3>
+                <mat-radio-group formControlName="internetbanking" aria-label="Select an option">
+                    <mat-radio-button value="Yes">Yes<mat-icon matSuffix>yes</mat-icon></mat-radio-button>
+                    <mat-radio-button value="No">No<mat-icon matSuffix>no</mat-icon></mat-radio-button>
+        
+                </mat-radio-group>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['internetbanking'].touched && firstFormGroup.controls['internetbanking'].invalid">
+                    <span *ngIf="firstFormGroup.controls['internetbanking'].hasError('required')">Select Gender</span>
+                </div>
+            </div>
+            <div class="gender">
+                <h3>Mobile Banking :</h3>
+                <mat-radio-group formControlName="mobilebanking" aria-label="Select an option">
+                    <mat-radio-button value="Yes">Yes<mat-icon matSuffix>yes</mat-icon></mat-radio-button>
+                    <mat-radio-button value="No">No<mat-icon matSuffix>no</mat-icon></mat-radio-button>
+        
+                </mat-radio-group>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['mobilebanking'].touched && firstFormGroup.controls['mobilebanking'].invalid">
+                    <span *ngIf="firstFormGroup.controls['mobilebanking'].hasError('required')">Select Gender</span>
+                </div>
+            </div>
+            <div class="gender">
+                <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+                &nbsp;
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Communication Address</ng-template>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Permanent Address</mat-label>
+                    <input formControlName="presentaddress" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>place</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['presentaddress'].touched && firstFormGroup.controls['presentaddress'].invalid">
+                    <span *ngIf="firstFormGroup.controls['presentaddress'].hasError('required')">Min 6 & Max 32 characters
+                        allowed</span>
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp; <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Permanent Address</mat-label>
+                    <input formControlName="permanentaddress" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>my_location</mat-icon>
+                </mat-form-field>
+                <div style="color: red;"
+                    *ngIf="firstFormGroup.controls['permanentaddress'].touched && firstFormGroup.controls['permanentaddress'].invalid">
+                    <span *ngIf="firstFormGroup.controls['permanentaddress'].hasError('required')">Not a valid email</span>
+                </div>
+            </div>
+            <div class="gender">
+                <button mat-raised-button color="primary">previous</button>
+                &nbsp; &nbsp;
+                <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+                &nbsp; &nbsp;
+                <button mat-stroked-button color="primary" (click)="stepper.reset()">Reset</button>
+            </div>
+        </form>
+    </mat-step>
+</mat-stepper>
+</mat-card>
