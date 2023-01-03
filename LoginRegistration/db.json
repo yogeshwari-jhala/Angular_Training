@@ -14,16 +14,6 @@
       "phone": "1234567891",
       "skills": "Angular Advance",
       "id": 2
-    },
-    {
-      "name": "harsha",
-      "email": "hk@gmail.com",
-      "password": "12422562",
-      "dob": "2022-12-20T18:30:00.000Z",
-      "gender": "female",
-      "phone": "1234567891",
-      "skills": "Angular Advance",
-      "id": 3
     }
   ],
   "stepper": [
